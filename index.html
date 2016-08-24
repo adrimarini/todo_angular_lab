@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='todosApp'>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  	<script src="js/app.js"></script>
+  	<script src="js/todosController.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap.js"></script>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Todos!</h2>
+    <div ng-controller='TodosController as todosCtrl'>
+      <span>You have {{todosCtrl.todos.length}} todos remaining. Poor Fluffy is still hungry.</span>
+      <ul>
+        <li ng-repeat='todo in todosCtrl.todos'>
+          <label class='checkbox'>
+            <input type='checkbox' ng-model='todo.done'>
+            <span class='done-{{todo.done}}'>{{todo.text}}</span>
+          </label>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </body>
+</html>
