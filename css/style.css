@@ -1,4 +1,42 @@
+h1 {
+  color: white;
+}
+
+h2 {
+  color: red
+}
+
 .done-true {
   text-decoration: line-through;
   color: grey;
+}
+.container {
+  margin: auto;
+  border: dashed grey 2px;
+  width: 30%;
+  padding: 10px;
+}
+
+.jumbotron {
+  background-image: url("http://66.media.tumblr.com/tumblr_lrnfgszSvo1qf2sbfo1_500.jpg");
+  background-repeat: repeat-x;
+  color: #fff;
+
+  height: 390px;
+  position: abolute;
+}
+input {
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 60px;
+  margin-top: 250px;
+}
+
+li {
+  list-style-type: none;
 }

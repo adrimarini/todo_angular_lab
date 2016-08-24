@@ -12,9 +12,12 @@
   </head>
   <body>
     <h2>Todos!</h2>
-    <img src='http://66.media.tumblr.com/tumblr_lrnfgszSvo1qf2sbfo1_500.jpg' alt='Fluffy'>
-    <p>Desi: "That Hamster has something wrong with it."</p>
-    <div ng-controller='TodosController'>
+    <div class="jumbotron">
+
+      <h1 class="display-3 desi">Desi: "That Hamster has something wrong with it."</h1>
+    </div>
+
+    <div ng-controller='TodosController' class="container">
       <form ng-submit='addTodo()'>
         <input ng-model='newTodo.text' type='text' placeholder="What's Fluffy up to now?" size='30'>
         <input type='submit' class='btn-primary' value='Fluffy!!!'>
