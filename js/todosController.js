@@ -1,21 +1,21 @@
 angular.module('todosApp')
   .controller('TodosController', TodosController);
 
-function TodosController () {
-  var self = this;
-  self.addTodo = addTodo;
+function TodosController ($scope, $log) {
+  $scope.addTodo = addTodo;
 
-  self.newTodo = {
+  $scope.newTodo = {
     text: '',
     done: false
   }
 
   function addTodo() {
-    self.todos.push({text: self.newTodo.text, done: false});
-    self.newTodo = {text: '', done: false};
+    $scope.todos.push({text: $scope.newTodo.text, done: false});
+    $scope.newTodo = {text: '', done: false};
+    $log.log($scope.todos);
   }
 
-  self.todos = [
+  $scope.todos = [
     {text: 'Get some Broccoli', done: false},
     {text: 'Feed Fluffy', done: false}
   ];
